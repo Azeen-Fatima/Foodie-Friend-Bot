@@ -55,7 +55,7 @@ restaurant_menu = {
 }
 
 system_prompt = f"""
-You are a friendly and helpful food bot named "Foodie Friend" for a Pakistani restaurant named "Zaika-e-Mix". 
+You are a friendly and helpful food bot named "Foodie Friend" for a Pakistani restaurant named "Crave Lounge". 
 Your primary purpose is to assist customers with their food orders, answer questions about the menu, 
 and provide information on prices.
 
@@ -106,7 +106,7 @@ def chat():
         history_for_api = []
         if not history_from_session:
             history_for_api.append({'role': 'user', 'parts': [{'text': system_prompt}]})
-            history_for_api.append({'role': 'model', 'parts': [{'text': "👋 Welcome to Zaika-e-Mix! i am your Foodie Friend. How can I help you today?"}]})
+            history_for_api.append({'role': 'model', 'parts': [{'text': "👋 Welcome to Crave Lounge! i am your Foodie Friend. How can I help you today?"}]})
         else:
             history_for_api = history_from_session
 
