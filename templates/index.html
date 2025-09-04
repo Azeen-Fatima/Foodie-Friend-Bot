@@ -16,7 +16,7 @@
             overflow: hidden;
         }
         .chat-container {
-            width: 100%;
+            width: 95%;
             max-width: 600px;
             height: 90vh;
             background-color: #1e1e1e; /* Slightly lighter dark for container */
@@ -37,37 +37,37 @@
         }
         #chat-history {
             flex-grow: 1;
-            padding: 20px;
+            padding: 15px;
             overflow-y: auto;
             display: flex;
             flex-direction: column;
         }
         .message-box {
             display: flex;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         .user-message {
             background-color: #FFD700; /* Yellow bubble */
             color: #000;
-            padding: 10px 15px;
+            padding: 10px 14px;
             border-radius: 18px 18px 0 18px;
             align-self: flex-end;
             margin-left: auto;
-            max-width: 70%;
+            max-width: 75%;
             word-wrap: break-word;
         }
         .bot-message {
             background-color: #2c2c2c; /* Dark grey bubble */
             color: #f1f1f1;
-            padding: 10px 15px;
+            padding: 10px 14px;
             border-radius: 18px 18px 18px 0;
             align-self: flex-start;
-            max-width: 70%;
+            max-width: 75%;
             word-wrap: break-word;
         }
         .input-container {
             display: flex;
-            padding: 15px;
+            padding: 12px;
             border-top: 1px solid #333;
             background-color: #1e1e1e;
         }
@@ -85,7 +85,7 @@
             color: #bbb;
         }
         #send-btn {
-            padding: 10px 20px;
+            padding: 10px 18px;
             background-color: #FFD700;
             color: #000;
             border: none;
@@ -96,6 +96,25 @@
         }
         #send-btn:hover {
             background-color: #e6c200;
+        }
+
+        /* ✅ Responsive Design */
+        @media (max-width: 600px) {
+            .chat-container {
+                height: 100vh;
+                border-radius: 0;
+            }
+            .chat-header {
+                font-size: 18px;
+                padding: 12px;
+            }
+            #user-input {
+                font-size: 14px;
+            }
+            #send-btn {
+                font-size: 14px;
+                padding: 8px 14px;
+            }
         }
     </style>
 </head>
@@ -174,3 +193,4 @@
     </script>
 </body>
 </html>
+
