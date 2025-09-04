@@ -120,7 +120,7 @@
 </head>
 <body>
     <div class="chat-container">
-        <div class="chat-header">Foody Friend</div>
+        <div class="chat-header">Foodie Friend</div>
         <div id="chat-history">
             <div class="message-box">
                 <div class="bot-message">Welcome to Crave Lounge! I am your Foodie Friend. How can I help you today?</div>
@@ -158,8 +158,8 @@
 
             // Typing indicator
             const typingIndicator = document.createElement('div');
-            typingIndicator.className = 'message-box bot-message';
-            typingIndicator.textContent = '...';
+            typingIndicator.className = 'message-box';
+            typingIndicator.innerHTML = `<div class="bot-message">...</div>`;
             chatHistory.appendChild(typingIndicator);
             chatHistory.scrollTop = chatHistory.scrollHeight;
 
@@ -175,7 +175,7 @@
 
                 const botMessageBox = document.createElement('div');
                 botMessageBox.className = 'message-box';
-                botMessageBox.innerHTML = `<div class="bot-message">${data.response}</div>`;
+                botMessageBox.innerHTML = `<div class="bot-message">${data.reply}</div>`;
                 chatHistory.appendChild(botMessageBox);
 
             } catch (error) {
@@ -193,4 +193,5 @@
     </script>
 </body>
 </html>
+
 
